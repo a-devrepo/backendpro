@@ -1,6 +1,6 @@
 package br.com.nca.algoritmos.listaencadeada;
 
-import br.com.nca.algoritmos.NumeroInteiroException;
+import br.com.nca.algoritmos.exceptions.NumeroInteiroException;
 
 public class ListaEncadeada {
 

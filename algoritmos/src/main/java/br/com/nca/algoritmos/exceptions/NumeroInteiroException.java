@@ -1,4 +1,4 @@
-package br.com.nca.algoritmos;
+package br.com.nca.algoritmos.exceptions;
 
 public class NumeroInteiroException extends RuntimeException {
     public NumeroInteiroException(String msg) {
