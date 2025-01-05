@@ -1,4 +1,4 @@
-package br.com.nca.algoritmos;
+package br.com.nca.algoritmos.listaencadeada;
 
 public class Node {
     private int value;
