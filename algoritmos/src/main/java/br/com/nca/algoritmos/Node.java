@@ -3,11 +3,11 @@ package br.com.nca.algoritmos;
 public class Node {
     private int value;
     private Node next;
-    private int index;
+    private int position;
 
     public Node(int value, int index) {
         this.value = value;
-        this.index = index;
+        this.position = index;
     }
 
     public Node() {
@@ -29,11 +29,11 @@ public class Node {
         this.next = next;
     }
 
-    public int getIndex() {
-        return index;
+    public int getPosition() {
+        return position;
     }
 
-    public void setIndex(int index) {
-        this.index = index;
+    public void setPosition(int position) {
+        this.position = position;
     }
 }

@@ -1,14 +1,15 @@
 package br.com.nca.algoritmos;
 
 public class ListaEncadeada {
+
     private int SIZE;
-    private int index;
+    private int position;
     private Node head;
     private Node tail;
 
     public ListaEncadeada() {
         this.SIZE = 0;
-        this.index = 0;
+        this.position = 0;
     }
 
     private void increase() {
@@ -33,7 +34,7 @@ public class ListaEncadeada {
 
     public void addToFront(int value) throws NumberFormatException {
         verifyValue(value);
-        Node node = new Node(value, index++);
+        Node node = new Node(value, position++);
 
         if (head == null) {
             head = node;
@@ -45,6 +46,41 @@ public class ListaEncadeada {
         increase();
     }
 
+    public void addToBack(int value) throws NumberFormatException {
+        verifyValue(value);
+        Node node = new Node(value, position++);
+        tail.setNext(node);
+        tail = node;
+    }
+
+    public Node pop() {
+        Node current = head;
+        Node next = current.getNext();
+
+        while (next != tail) {
+            current = next;
+            next = current.getNext();
+        }
+        Node node = tail;
+        tail = current;
+        decrease();
+        return node;
+    }
+    
+    public Node elementAt(int position) {
+        Node current = head;
+        Node next = current.getNext();
+
+        while (next != null) {
+            if (current.getPosition() == position) {
+                break;
+            }
+            current = next;
+            next = current.getNext();
+        }
+        return current;
+    }
+
     public void printList() {
         Node current = head;
         System.out.print("HEAD ");
@@ -54,6 +90,6 @@ public class ListaEncadeada {
             System.out.print(" -> ");
             current = current.getNext();
         }
-        System.out.print("TAIL " + tail.getValue());
+        System.out.println("TAIL " + tail.getValue());
     }
 }
