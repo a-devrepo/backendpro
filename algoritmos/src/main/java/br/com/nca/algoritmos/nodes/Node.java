@@ -3,11 +3,24 @@ package br.com.nca.algoritmos.nodes;
 public class Node {
     private int value;
     private Node next;
+    private Node previous;
     private int position;
 
-    public Node(int value, int index) {
+    public Node getPrevious() {
+        return previous;
+    }
+
+    public void setPrevious(Node previous) {
+        this.previous = previous;
+    }
+
+    public Node(int value, int position) {
         this.value = value;
-        this.position = index;
+        this.position = position;
+    }
+
+    public Node(int value) {
+        this.value = value;
     }
 
     public Node() {
@@ -35,5 +48,10 @@ public class Node {
 
     public void setPosition(int position) {
         this.position = position;
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(value);
     }
 }
