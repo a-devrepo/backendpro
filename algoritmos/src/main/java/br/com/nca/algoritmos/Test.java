@@ -9,12 +9,17 @@ public class Test {
         lista.addToFront(4);
         lista.addToFront(5);
 
-        lista.addToBack(10);
+        lista.push(10);
         lista.printList();
 
         lista.pop();
         lista.printList();
 
-        System.out.println("Elemento na posição: "+ lista.elementAt(0).getValue());
+        System.out.println("Elemento na posição " + 0 + ": " + lista.elementAt(0).getValue());
+        lista.remove(2);
+        lista.printList();
+
+        lista.insert(81,1);
+        lista.printList();
     }
 }
