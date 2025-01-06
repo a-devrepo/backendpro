@@ -19,6 +19,13 @@ public class Fila {
         increase();
     }
 
+    public void dequeue() {
+        Node node = front;
+        front = front.getNext();
+        node.setNext(null);
+        decrease();
+    }
+
     public Fila() {
         this.size = 0;
     }
@@ -36,7 +43,7 @@ public class Fila {
         System.out.print("FRONT ");
 
         while (current != null) {
-            System.out.print(current+" -> ");
+            System.out.print(current + " -> ");
             current = current.getNext();
         }
         System.out.println(" BACK");
