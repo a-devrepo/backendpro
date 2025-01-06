@@ -26,8 +26,12 @@ public class Fila {
         decrease();
     }
 
-    public int size(){
+    public int size() {
         return size;
+    }
+
+    public Node rear() {
+        return back;
     }
 
     public Fila() {
