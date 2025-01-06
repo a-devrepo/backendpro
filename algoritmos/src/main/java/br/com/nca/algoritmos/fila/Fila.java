@@ -7,6 +7,10 @@ public class Fila {
     private Node back;
     private int size;
 
+    public Fila() {
+        this.size = 0;
+    }
+
     public void enqueue(int value) {
         Node node = new Node(value);
         if (this.size == 0) {
@@ -42,10 +46,6 @@ public class Fila {
         return size == 0;
     }
 
-    public Fila() {
-        this.size = 0;
-    }
-
     private void increase() {
         this.size++;
     }
@@ -58,10 +58,10 @@ public class Fila {
         Node current = front;
         System.out.print("FRONT ");
 
-        while (current != null) {
+        while (current != back) {
             System.out.print(current + " -> ");
             current = current.getNext();
         }
-        System.out.println(" BACK");
+        System.out.println("BACK "+ back);
     }
 }
