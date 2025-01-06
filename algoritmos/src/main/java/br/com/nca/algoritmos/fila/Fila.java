@@ -34,6 +34,14 @@ public class Fila {
         return back;
     }
 
+    public Node front() {
+        return front;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
     public Fila() {
         this.size = 0;
     }
