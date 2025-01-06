@@ -26,6 +26,10 @@ public class Fila {
         decrease();
     }
 
+    public int size(){
+        return size;
+    }
+
     public Fila() {
         this.size = 0;
     }
