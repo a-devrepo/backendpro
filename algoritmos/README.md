@@ -14,6 +14,6 @@ Pilha:
 #
 Fila:
 - enqueue(int value): O(1) - O último nó da fila é referenciado (back), bastando fazer esse apontar para o novo nó e em seguida usar a referência ao último nó da fila para apontar para o novo. 
-- dequeue(int value): O(1) - A referência ao primeiro nó (front) passa a apontar para o próximo, e o nó que era referenciado como último não apontará para outro.
+- dequeue(int value): O(1) - A referência ao primeiro nó (front) passa a apontar para o próximo, e o nó que era referenciado como primeiro não apontará para outro.
 - rear(): O(1) - Retorna o nó referenciado na estrutura como back.
 - front(): O(1) - Retorna o nó referenciado na estrutura como front.
