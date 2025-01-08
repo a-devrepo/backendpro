@@ -74,4 +74,14 @@ public class TabelaHash {
         return null;
     }
 
+    public void print() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("\n").append("[ ");
+        for (Node node : hashTable) {
+           sb.append(node).append(" ");
+        }
+        sb.append("]");
+        System.out.println(sb.toString());
+    }
+
 }

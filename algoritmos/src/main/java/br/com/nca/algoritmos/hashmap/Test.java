@@ -15,14 +15,15 @@ public class Test {
 
         TabelaHash tabelaHash = new TabelaHash();
 
-        tabelaHash.put(node1.getValue(),node1);
-        tabelaHash.put(node2.getValue(),node2);
-        tabelaHash.put(node3.getValue(),node3);
-        tabelaHash.put(node4.getValue(),node4);
-        tabelaHash.put(node5.getValue(),node5);
-        tabelaHash.put(node6.getValue(),node6);
-        tabelaHash.put(node7.getValue(),node7);
+        tabelaHash.put(node1.getValue(), node1);
+        tabelaHash.put(node2.getValue(), node2);
+        tabelaHash.put(node3.getValue(), node3);
+        tabelaHash.put(node4.getValue(), node4);
+        tabelaHash.put(node5.getValue(), node5);
+        tabelaHash.put(node6.getValue(), node6);
+        tabelaHash.put(node7.getValue(), node7);
 
+        tabelaHash.print();
 
     }
 }
