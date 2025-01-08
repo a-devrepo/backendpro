@@ -30,8 +30,11 @@ public class Test {
         tabelaHash.print();
 
         Node node = tabelaHash.get(4174);
-        
+
         System.out.println(node);
 
+        tabelaHash.clear();
+
+        tabelaHash.print();
     }
 }

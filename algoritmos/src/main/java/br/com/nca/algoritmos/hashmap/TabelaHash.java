@@ -88,9 +88,13 @@ public class TabelaHash {
                 size--;
                 return auxNode;
             }
-            sondagem++;
+            sondagem--;
         }
         return null;
+    }
+
+    public void clear() {
+        hashTable = new Node[CAPACIDADE_DEFAULT];
     }
 
     public void print() {
