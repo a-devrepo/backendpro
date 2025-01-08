@@ -6,14 +6,6 @@ public class Node {
     private Node previous;
     private int position;
 
-    public Node getPrevious() {
-        return previous;
-    }
-
-    public void setPrevious(Node previous) {
-        this.previous = previous;
-    }
-
     public Node(int value, int position) {
         this.value = value;
         this.position = position;
@@ -21,6 +13,14 @@ public class Node {
 
     public Node(int value) {
         this.value = value;
+    }
+
+    public Node getPrevious() {
+        return previous;
+    }
+
+    public void setPrevious(Node previous) {
+        this.previous = previous;
     }
 
     public Node() {
