@@ -19,4 +19,4 @@ Fila:
 - front(): O(1) - Retorna o nó referenciado na estrutura como front.
 #
 Tabela Hash:
-- Para a função Hash optei por utilizar o método da multiplicação, pela qual usamos uma chave constante (número decimal), a parte fracionária do resultado alterior o retirada, o número anterior é multiplicado pelo tamanho da tabela e a parte inteira do resultado anterior é extraída.
+- Para a função Hash optei por utilizar o método da multiplicação, pela qual usamos uma chave constante (número decimal), a parte fracionária do resultado anterior é retirada, o número anterior é multiplicado pelo tamanho da tabela e a parte inteira do resultado anterior é extraída.
