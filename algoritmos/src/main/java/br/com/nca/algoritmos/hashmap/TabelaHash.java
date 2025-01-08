@@ -7,7 +7,7 @@ public class TabelaHash {
     public static final double FATOR_CARGA_DEFAULT = 0.75;
     public static final int CAPACIDADE_DEFAULT = 10;
     private int size;
-    private static final Node APAGADO = new Node(Integer.MIN_VALUE, Integer.MIN_VALUE);
+    private static final Node APAGADO = new Node(-1, -1);
     private Node[] hashTable;
 
 
@@ -48,7 +48,7 @@ public class TabelaHash {
             hashKey = (hashKey(key) + sondagem) % hashTable.length;
             Node auxNode = hashTable[hashKey];
             if (auxNode == null || auxNode.getValue() == key ||
-                    auxNode.getValue() == Integer.MIN_VALUE) {
+                    auxNode.getValue() == APAGADO.getValue()) {
                 hashTable[hashKey] = node;
                 this.size++;
                 return;

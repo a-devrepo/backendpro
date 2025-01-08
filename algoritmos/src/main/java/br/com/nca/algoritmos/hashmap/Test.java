@@ -25,5 +25,9 @@ public class Test {
 
         tabelaHash.print();
 
+        tabelaHash.remove(node1.getValue());
+
+        tabelaHash.print();
+
     }
 }
