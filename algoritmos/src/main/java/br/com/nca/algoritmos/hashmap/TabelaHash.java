@@ -7,7 +7,9 @@ public class TabelaHash {
     public static final double FATOR_CARGA_DEFAULT = 0.75;
     public static final int CAPACIDADE_DEFAULT = 10;
     private int size;
+    private static final Node APAGADO = new Node(Integer.MIN_VALUE, Integer.MIN_VALUE);
     private Node[] hashTable;
+
 
     public TabelaHash() {
         hashTable = new Node[CAPACIDADE_DEFAULT];
@@ -21,7 +23,55 @@ public class TabelaHash {
         return (int) hash;
     }
 
-    public void put(String key, Node node) {
+    public void put(Integer key, Node newNode) {
+        if ((size / hashTable.length) >= FATOR_CARGA_DEFAULT || size == hashTable.length) {
+            size = 0;
+            Node[] newHashTable = new Node[hashTable.length * 2];
+
+            for (Node node : hashTable) {
+                if (node != null) {
+                    put(newHashTable, node.getValue(), node);
+                }
+            }
+            put(newHashTable, newNode.getValue(), newNode);
+        } else {
+            put(hashTable, key, newNode);
+        }
+    }
+
+    private void put(Node[] hashTable, Integer key, Node node) {
+        int sondagem = 0;
+        int hashKey;
+
+        while (sondagem < hashTable.length) {
+
+            hashKey = (hashKey(key) + sondagem) % hashTable.length;
+            Node auxNode = hashTable[hashKey];
+            if (auxNode == null || auxNode.getValue() == key ||
+                    auxNode.getValue() == Integer.MIN_VALUE) {
+                hashTable[hashKey] = node;
+                this.size++;
+                return;
+            }
+            sondagem++;
+        }
+    }
+
+    public Node remove(Integer key) {
+        int sondagem = 0;
+        int hashKey;
+
+        while (sondagem < hashTable.length) {
+            hashKey = (hashKey(key) + sondagem) % hashTable.length;
+            if (hashTable[hashKey] != null && hashTable[hashKey].getValue() == key) {
+                Node auxNode = hashTable[hashKey];
+                hashTable[hashKey] = APAGADO;
+                size--;
+                return auxNode;
+            }
+            sondagem++;
+        }
+        return null;
     }
 
 }
