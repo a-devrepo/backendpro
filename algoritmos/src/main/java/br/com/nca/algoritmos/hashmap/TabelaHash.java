@@ -14,12 +14,14 @@ public class TabelaHash {
         size = 0;
     }
 
-    private int hashKey(String key){
-        return 0;
+    private int hashKey(Integer key) {
+        double a = 0.617648934;
+        double hash = key * a;
+        hash = (hash % 1) * this.hashTable.length;
+        return (int) hash;
     }
 
     public void put(String key, Node node) {
-    
     }
 
 }
