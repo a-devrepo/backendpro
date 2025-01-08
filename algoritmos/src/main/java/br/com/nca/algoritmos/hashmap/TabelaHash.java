@@ -57,6 +57,25 @@ public class TabelaHash {
         }
     }
 
+    public Node get(Integer key) {
+        int sondagem = 0;
+        int hashKey;
+
+        while (sondagem < hashTable.length) {
+            hashKey = (hashKey(key) + sondagem) % hashTable.length;
+
+            if (hashTable[hashKey] == null) {
+                return null;
+            }
+
+            if (hashTable[hashKey].getValue() == key) {
+                return hashTable[hashKey];
+            }
+            sondagem++;
+        }
+        return null;
+    }
+
     public Node remove(Integer key) {
         int sondagem = 0;
         int hashKey;
@@ -78,7 +97,7 @@ public class TabelaHash {
         StringBuilder sb = new StringBuilder();
         sb.append("\n").append("[ ");
         for (Node node : hashTable) {
-           sb.append(node).append(" ");
+            sb.append(node).append(" ");
         }
         sb.append("]");
         System.out.println(sb.toString());
