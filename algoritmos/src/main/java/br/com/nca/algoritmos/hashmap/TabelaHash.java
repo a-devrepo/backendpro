@@ -76,7 +76,7 @@ public class TabelaHash {
         return null;
     }
 
-    public Node remove(Integer key) {
+    public Node delete(Integer key) {
         int sondagem = 0;
         int hashKey;
 
