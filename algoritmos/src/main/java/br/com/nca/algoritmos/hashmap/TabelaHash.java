@@ -6,6 +6,7 @@ public class TabelaHash {
 
     public static final double FATOR_CARGA_DEFAULT = 0.75;
     public static final int CAPACIDADE_DEFAULT = 10;
+    public static final double NUMERO_MULTIPLICACAO = 0.617648934;
     private int size;
     private static final Node APAGADO = new Node(-1, -1);
     private Node[] hashTable;
@@ -17,8 +18,7 @@ public class TabelaHash {
     }
 
     private int hashKey(Integer key) {
-        double a = 0.617648934;
-        double hash = key * a;
+        double hash = key * NUMERO_MULTIPLICACAO;
         hash = (hash % 1) * this.hashTable.length;
         return (int) hash;
     }
