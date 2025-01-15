@@ -7,3 +7,5 @@ O método topDown() tem melhor desempenho que o recursivo, já que faz uso de me
 O(n), pois armazena valores de 1! até n!,e a profundidade da pilha de chamadas é equivalente à O(n), vez que o número de chamadas corresponde ao input n. A complexidade de tempo é O(n2logn).
 
 No que diz respeito ao bottomUp(), a complexidade de espaço é O(n), porque armazena n+1 elementos. A complexidade de tempo é de O(n2logn), pois faz n iterações, e a cada multiplicação o número aumenta a quantidade de dígitos.
+
+O algoritmo que seleciona o elemento n da sequência Fibonacci tem complexidade de espaço O(n), vez que armazena os valores da sequência, e além disso a pilha de chamadas corresponde a n vezes, a depender do número escolhido. Já a complexidade de tempo é O(n), pois o resultado do cálculo é armazenado na estrutura, e assim não precisa ser recalculado, sendo o número de chamadas equivalente a n.
