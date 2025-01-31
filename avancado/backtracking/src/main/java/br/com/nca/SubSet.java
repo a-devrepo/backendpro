@@ -4,32 +4,27 @@ import java.util.*;
 
 public class SubSet {
 
-    Map<String, List<Integer>> subsets = new HashMap<>();
-    List<Integer> permutations = new ArrayList<>();
-    Map<Integer, Integer> used = new HashMap<>();
+    private List<List<Integer>> subsets = new ArrayList<>();
+    private List<Integer> permutations = new ArrayList<>();
 
-    public void permuteBacktracking(List<Integer> numbers, int elements) {
-        if (permutations.size() == elements) {
-            List<Integer> permutation = new ArrayList<>(permutations);
-            StringBuilder key = new StringBuilder(permutation.toString().replaceAll("\\W", ""));
-            if (!subsets.containsKey(key.toString()) && !subsets.containsKey(key.reverse().toString())) {
-                subsets.put(key.toString(), permutation);
-            }
-            return;
-        }
-        for (int i = 0; i < numbers.size(); i++) {
-            if (used.get(i) == null) {
-                used.put(i, numbers.get(i));
-                permutations.add(numbers.get(i));
-                permuteBacktracking(numbers, elements);
-                used.remove(i);
-                permutations.remove(permutations.size() - 1);
-            }
-        }
+    public void permuteBacktracking(int[] numbers, int elements) {
+        permuteBacktracking(numbers, elements, 0);
 
     }
 
+    public void permuteBacktracking(int[] numbers, int elements, int begining) {
+        if (permutations.size() == elements) {
+            subsets.add(new ArrayList<>(permutations));
+            return;
+        }
+        for (int i = begining; i < numbers.length; i++) {
+            permutations.add(numbers[i]);
+            permuteBacktracking(numbers, elements, i + 1);
+            permutations.remove(permutations.size() - 1);
+        }
+    }
+
     public void print() {
-        subsets.values().forEach(System.out::println);
+        subsets.forEach(System.out::println);
     }
 }
