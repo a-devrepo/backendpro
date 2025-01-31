@@ -8,5 +8,9 @@ public class Program {
 
         subSet.permuteBacktracking(numbers, 2);
         subSet.print();
+
+        int[] numbers2 = {1,2,3,4};
+        subSet.permuteBacktracking(numbers2, 1);
+        subSet.print();
     }
 }
