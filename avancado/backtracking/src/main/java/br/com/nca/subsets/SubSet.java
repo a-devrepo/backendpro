@@ -1,4 +1,4 @@
-package br.com.nca;
+package br.com.nca.subsets;
 
 import java.util.*;
 

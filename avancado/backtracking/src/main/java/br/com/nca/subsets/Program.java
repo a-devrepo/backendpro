@@ -1,4 +1,4 @@
-package br.com.nca;
+package br.com.nca.subsets;
 
 public class Program {
     public static void main(String[] args) {
