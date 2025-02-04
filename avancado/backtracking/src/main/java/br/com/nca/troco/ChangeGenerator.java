@@ -1,6 +1,9 @@
 package br.com.nca.troco;
 
+import java.util.logging.Logger;
+
 public class ChangeGenerator {
+    Logger logger = Logger.getLogger(getClass().getName());
     private int[][] solution;
 
     public void generateChange(double quantity, int[] coins) {
@@ -20,7 +23,7 @@ public class ChangeGenerator {
 
     private void printSolution() {
         for (int i = 0; i < solution.length; i++) {
-            System.out.println(solution[i][1] + " moeda(s) de: " + solution[i][0] + " R$");
+            logger.info(solution[i][1] + " moeda(s) de: " + solution[i][0] + " R$");
         }
     }
 }
