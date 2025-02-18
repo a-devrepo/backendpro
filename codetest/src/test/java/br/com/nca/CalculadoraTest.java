@@ -33,4 +33,13 @@ public class CalculadoraTest {
         assertThat(resultado, is(valorEsperado));
     }
 
+    @Test
+    public void test_DeveMultiplicarDoisInteiros(){
+        int valorEsperado = 2500;
+
+        int resultado = calculadora.multiplicar(50,50);
+
+        assertThat(resultado, is(valorEsperado));
+    }
+
 }
