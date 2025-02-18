@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61bfe563-d098-4d12-b05d-b2c5d12bdcbb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/br/com/nca/FibonacciTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/nca/FibonacciTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +66,7 @@
       <recent name="br.com.nca" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FibonacciTest.test_DeveRetornarPrimeiroNumeroDaSequencia">
+  <component name="RunManager" selected="JUnit.FibonacciTest.test_DeveRetornarSegundoNumeroDaSequencia">
     <configuration name="CalculadoraTest.test_DeveDividirDoisInteiros" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="codetest" />
       <extension name="coverage">
@@ -116,22 +115,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculadoraTest.test_DeveSubtrairDoisInteiros" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="codetest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.nca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.com.nca" />
-      <option name="MAIN_CLASS_NAME" value="br.com.nca.CalculadoraTest" />
-      <option name="METHOD_NAME" value="test_DeveSubtrairDoisInteiros" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FibonacciTest.test_DeveRetornarPrimeiroNumeroDaSequencia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="codetest" />
       <extension name="coverage">
@@ -148,13 +131,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FibonacciTest.test_DeveRetornarSegundoNumeroDaSequencia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="codetest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.nca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.nca" />
+      <option name="MAIN_CLASS_NAME" value="br.com.nca.FibonacciTest" />
+      <option name="METHOD_NAME" value="test_DeveRetornarSegundoNumeroDaSequencia" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FibonacciTest.test_DeveRetornarSegundoNumeroDaSequencia" />
         <item itemvalue="JUnit.FibonacciTest.test_DeveRetornarPrimeiroNumeroDaSequencia" />
         <item itemvalue="JUnit.CalculadoraTest.test_DeveLancarExcecaoAoDividirPorZero" />
         <item itemvalue="JUnit.CalculadoraTest.test_DeveDividirDoisInteiros" />
         <item itemvalue="JUnit.CalculadoraTest.test_DeveMultiplicarDoisInteiros" />
-        <item itemvalue="JUnit.CalculadoraTest.test_DeveSubtrairDoisInteiros" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +173,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1739913532484</updated>
-      <workItem from="1739913533813" duration="6558000" />
+      <workItem from="1739913533813" duration="6742000" />
     </task>
     <servers />
   </component>

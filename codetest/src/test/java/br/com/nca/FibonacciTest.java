@@ -22,4 +22,11 @@ public class FibonacciTest {
         assertThat(elementoEsperado, is(elementoEncontrado));
     }
 
+    @Test
+    public void test_DeveRetornarSegundoNumeroDaSequencia() {
+        int elementoEsperado = 1;
+        int elementoEncontrado = fibonacci.encontrarElementoEm(1);
+        assertThat(elementoEsperado, is(elementoEncontrado));
+    }
+
 }
