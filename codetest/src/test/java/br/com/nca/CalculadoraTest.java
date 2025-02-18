@@ -24,4 +24,13 @@ public class CalculadoraTest {
         assertThat(resultado, is(valorEsperado));
     }
 
+    @Test
+    public void test_DeveSubtrairDoisInteiros(){
+        int valorEsperado = 0;
+
+        int resultado = calculadora.subtrair(50,50);
+
+        assertThat(resultado, is(valorEsperado));
+    }
+
 }
