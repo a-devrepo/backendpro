@@ -42,4 +42,13 @@ public class CalculadoraTest {
         assertThat(resultado, is(valorEsperado));
     }
 
+    @Test
+    public void test_DeveDividirDoisInteiros(){
+        int valorEsperado = 1;
+
+        int resultado = calculadora.dividir(50,50);
+
+        assertThat(resultado, is(valorEsperado));
+    }
+
 }
