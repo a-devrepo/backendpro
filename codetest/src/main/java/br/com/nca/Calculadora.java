@@ -3,7 +3,7 @@ package br.com.nca;
 /**
  * @author Adev
  * @version 1.0.0
- * 
+ * CLasse simples a ponto de seus métodos deixarem claro o que é feito através deles.
  */
 public class Calculadora {
 
