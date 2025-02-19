@@ -1,5 +1,10 @@
 package br.com.nca;
 
+/**
+ * @author Adev
+ * @version 1.0.0
+ * 
+ */
 public class Calculadora {
 
     public int somar(int numero1, int numero2) {
