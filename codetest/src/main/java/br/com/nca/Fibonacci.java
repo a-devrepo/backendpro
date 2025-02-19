@@ -3,17 +3,18 @@ package br.com.nca;
 public class Fibonacci {
 
     private final int MAX_ELEMENTOS = 100;
-    private final int[] elementosFibonacci = new int[MAX_ELEMENTOS];
+    private final long[] elementosFibonacci = new long[MAX_ELEMENTOS];
 
 
-    public int encontrarElementoEm(int posicao) {
+    public long encontrarElementoEm(int posicao) {
+        posicao--;
         for (int i = 0; i < MAX_ELEMENTOS; i++) {
             elementosFibonacci[i] = -1;
         }
         return buscarElemento(posicao);
     }
 
-    private int buscarElemento(int posicao) {
+    private long buscarElemento(int posicao) {
         if (existeElementoEm(posicao)) {
             if (posicao <= 1) {
                 elementosFibonacci[posicao] = posicao;

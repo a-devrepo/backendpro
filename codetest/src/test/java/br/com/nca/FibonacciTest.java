@@ -17,16 +17,22 @@ public class FibonacciTest {
 
     @Test
     public void test_DeveRetornarPrimeiroNumeroDaSequencia() {
-        int elementoEsperado = 0;
-        int elementoEncontrado = fibonacci.encontrarElementoEm(0);
+        long elementoEsperado = 0;
+        long elementoEncontrado = fibonacci.encontrarElementoEm(1);
         assertThat(elementoEsperado, is(elementoEncontrado));
     }
 
     @Test
     public void test_DeveRetornarSegundoNumeroDaSequencia() {
-        int elementoEsperado = 1;
-        int elementoEncontrado = fibonacci.encontrarElementoEm(1);
+        long elementoEsperado = 1;
+        long elementoEncontrado = fibonacci.encontrarElementoEm(2);
         assertThat(elementoEsperado, is(elementoEncontrado));
     }
 
+    @Test
+    public void test_DeveRetornarSextagesimoNumeroDaSequencia() {
+        long elementoEsperado = 956722026041L;
+        long elementoEncontrado = fibonacci.encontrarElementoEm(60);
+        assertThat(elementoEsperado, is(elementoEncontrado));
+    }
 }
