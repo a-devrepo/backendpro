@@ -1,4 +1,4 @@
-package br.com.animals_service;
+package br.com.animalsservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

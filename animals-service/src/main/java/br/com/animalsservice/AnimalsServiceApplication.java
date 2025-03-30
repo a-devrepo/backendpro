@@ -1,4 +1,4 @@
-package br.com.animals_service;
+package br.com.animalsservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
