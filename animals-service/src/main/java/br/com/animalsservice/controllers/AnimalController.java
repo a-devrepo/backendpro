@@ -4,7 +4,6 @@ import br.com.animalsservice.entidades.Animal;
 import br.com.animalsservice.repositories.AnimalRepository;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -18,12 +17,22 @@ public class AnimalController {
     }
 
     @GetMapping
-    private List<Animal> findAll(){
+    private List<Animal> findAll() {
         return repository.findAll();
     }
 
     @PostMapping
     private Animal create(@RequestBody Animal animal) {
         return repository.save(animal);
+    }
+
+    @GetMapping("/not-adopted")
+    public List<Animal> findNotAdopted() {
+        return repository.findNotAdopted();
+    }
+
+    @GetMapping("/adopted")
+    public List<Animal> findAdopted() {
+        return repository.findAdopted();
     }
 }
