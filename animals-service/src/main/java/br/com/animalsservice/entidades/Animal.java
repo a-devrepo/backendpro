@@ -21,6 +21,10 @@ public class Animal {
     @Column(name = "raca", nullable = false)
     private String raca;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "tipo", nullable = false)
+    private AnimalType tipo;
+
     @Temporal(TemporalType.DATE)
     @Column(name = "data_entrada", nullable = false)
     private Date dataEntrada;
@@ -84,6 +88,14 @@ public class Animal {
 
     public void setRaca(String raca) {
         this.raca = raca;
+    }
+
+    public AnimalType getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(AnimalType tipo) {
+        this.tipo = tipo;
     }
 
     public String getIdadeEstimada() {
