@@ -39,7 +39,7 @@ public class AnimalController {
     }
 
     @GetMapping("/rescued/{initdate}/{enddate}")
-    public List<AnimaisResgatados> findRescuedAnimalsByMemberName(@PathVariable("initdate") LocalDate initDate, @PathVariable("enddate") LocalDate endDate) {
-        return service.findRescuedAnimalsByMemberName(initDate, endDate);
+    public List<AnimaisResgatados> findRescuedAnimalsGroupedByMemberName(@PathVariable("initdate") LocalDate initDate, @PathVariable("enddate") LocalDate endDate) {
+        return service.findRescuedAnimalsGroupedByMemberName(initDate, endDate);
     }
 }

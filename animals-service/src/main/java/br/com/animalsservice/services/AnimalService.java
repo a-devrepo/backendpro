@@ -33,7 +33,7 @@ public class AnimalService {
         return repository.findAdopted();
     }
 
-    public List<AnimaisResgatados> findRescuedAnimalsByMemberName(LocalDate dataInicio, LocalDate dataFim) {
+    public List<AnimaisResgatados> findRescuedAnimalsGroupedByMemberName(LocalDate dataInicio, LocalDate dataFim) {
         return repository.findRescuedAnimalsByMemberName(dataInicio, dataFim);
     }
 }
